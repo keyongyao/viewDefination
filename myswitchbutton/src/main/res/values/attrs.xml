@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MySwitch">
+        <attr name="backgroundRes" format="reference" />
+        <attr name="slidingImgRes" format="reference" />
+        <attr name="isCheck" format="boolean" />
+    </declare-styleable>
+</resources>

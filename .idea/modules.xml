@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ViewDefination.iml" filepath="$PROJECT_DIR$/ViewDefination.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drawdownwindow/drawdownwindow.iml" filepath="$PROJECT_DIR$/drawdownwindow/drawdownwindow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drawmenu/drawmenu.iml" filepath="$PROJECT_DIR$/drawmenu/drawmenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myswitchbutton/myswitchbutton.iml" filepath="$PROJECT_DIR$/myswitchbutton/myswitchbutton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pullfreshlist/pullfreshlist.iml" filepath="$PROJECT_DIR$/pullfreshlist/pullfreshlist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabcard/tabcard.iml" filepath="$PROJECT_DIR$/tabcard/tabcard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/youkumenu/youkumenu.iml" filepath="$PROJECT_DIR$/youkumenu/youkumenu.iml" />
+    </modules>
+  </component>
+</project>

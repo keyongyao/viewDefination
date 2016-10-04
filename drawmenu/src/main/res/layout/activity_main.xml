@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.kk.drawmenu.MainActivity">
+
+    <com.kk.drawmenu.DrawMenu
+        android:id="@+id/dm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/draw_menu" />
+
+        <include layout="@layout/activity_content" />
+    </com.kk.drawmenu.DrawMenu>
+</RelativeLayout>
