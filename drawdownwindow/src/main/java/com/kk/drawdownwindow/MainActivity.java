@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
         setClickListener();
     }
 
+    // 填充一些模拟数据
     private void initData() {
         mNum = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
@@ -41,13 +42,18 @@ public class MainActivity extends Activity {
     }
 
     private void setClickListener() {
+        // 弹出 下拉窗体
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //选择 多参数的构造器
                 mPopupWindow = new PopupWindow(mListView, input.getWidth(), 300);
                 //    mPopupWindow.setFocusable(true);
+                // 设置背景，才能点击窗体
                 mPopupWindow.setBackgroundDrawable(new BitmapDrawable());
+                // 设置外部可点击，点击时，窗体消失
                 mPopupWindow.setOutsideTouchable(true);
+                // 弹出窗体的位置
                 mPopupWindow.showAsDropDown(input, 0, 0);
 
             }

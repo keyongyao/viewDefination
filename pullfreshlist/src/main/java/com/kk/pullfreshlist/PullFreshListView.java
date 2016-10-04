@@ -119,6 +119,7 @@ public class PullFreshListView extends ListView {
 
     }
 
+    // 用户回调接口
     interface OnLoadingData {
         /**
          * 在头部加载数据 <br>

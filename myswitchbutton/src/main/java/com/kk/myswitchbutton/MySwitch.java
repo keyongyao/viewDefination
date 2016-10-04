@@ -134,7 +134,7 @@ public class MySwitch extends View {
         mLastCheck = mIsCheck;
     }
 
-    // 按钮选中状态 变化
+    // 按钮选中状态 变化接口，用户回调
     interface OnMySwitchStatusChange {
         void onStatusChange(boolean isChecked);
     }

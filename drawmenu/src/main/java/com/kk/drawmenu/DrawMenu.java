@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Scroller;
 
 /**
+ * 一个自定义的右拉菜单
  * Created by Administrator on 2016/10/4.
  */
 
@@ -18,7 +19,6 @@ public class DrawMenu extends ViewGroup {
     float mMoveX;
     Scroller mScroller;
     boolean mIsShow;
-    // 在菜单上透传 横向 滑动的 事件
     float downX = 0, downY = 0;
 
     public DrawMenu(Context context) {
@@ -125,7 +125,7 @@ public class DrawMenu extends ViewGroup {
         }
     }
 
-    // 开关菜单
+    // 开关菜单方法，供外部使用
     public void openOrCloseMenu() {
         if (!mIsShow) {
             scrollTo(-getChildAt(0).getMeasuredWidth(), 0);
@@ -136,6 +136,7 @@ public class DrawMenu extends ViewGroup {
         }
     }
 
+    // 从子控件 上偷走 触摸事件，使能在菜单上滑动也能呢个对开关菜单
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
 

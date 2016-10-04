@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
         setLoop();
     }
 
+    // 图片自动 切换
     private void setLoop() {
         new Thread(new Runnable() {
             @Override
@@ -55,6 +56,7 @@ public class MainActivity extends Activity {
         }).start();
     }
 
+    // 实时更新 底部的文字描述和 圆点的状态
     private void setListener() {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -88,6 +90,7 @@ public class MainActivity extends Activity {
         viewPager.setCurrentItem(50);
     }
 
+    // 展示的样本数据
     private void iniData() {
         mImgIDs = new int[]{R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e};
         mDes = new String[]{"巩俐不低俗,我就不能低俗",
@@ -97,6 +100,7 @@ public class MainActivity extends Activity {
                 "热血屌丝的反杀"};
 
         mImgList = new ArrayList<>();
+        // 初始化 圆点 的 View
         for (int i = 0; i < mImgIDs.length; i++) {
             ImageView imageView = new ImageView(this);
             imageView.setImageResource(mImgIDs[i]);
@@ -123,11 +127,13 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
+        // 停止 循环切换图片
         isRunning = false;
         super.onDestroy();
     }
 
     class MyPagerAdapter extends PagerAdapter {
+        // 添加图片条目
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             Log.i(TAG, "MyPagerAdapter.instantiateItem: 添加条目 position :" + position);
@@ -136,7 +142,7 @@ public class MainActivity extends Activity {
             return imageView;
         }
 
-
+        // 销毁条目，同时保留3个条目  左右中
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             Log.i(TAG, "MyPagerAdapter.destroyItem: 删除条目 position :" + position);
